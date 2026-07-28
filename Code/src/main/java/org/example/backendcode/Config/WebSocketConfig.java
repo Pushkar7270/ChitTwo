@@ -21,13 +21,16 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
      * An endpoint is an address where a client connects to a server.
      *
      * @param registry
+     *
+     * /chat is the place where connection is established
      */
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-       registry.addEndpoint("/ws")
+       registry.addEndpoint("/chat")
                .setAllowedOriginPatterns("*")
                .withSockJS();
     }
+
 
 
     /**
@@ -38,8 +41,8 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
      */
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        registry.setApplicationDestinationPrefixes("/app");
         registry.enableSimpleBroker("/topic");
+        registry.setApplicationDestinationPrefixes("/app");
     }
 
 
