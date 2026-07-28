@@ -22,7 +22,7 @@ public class ChatController {
     /**
      * adds username in the webSocket
      */
-    @MessageMapping("/chat.sendMessage")
+    @MessageMapping("/chat.addUser")
     @SendTo("/topic/public")
     public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccesser){
         headerAccesser.getSessionAttributes().put("username", chatMessage.getSender());
