@@ -27,28 +27,15 @@ public class ChatController {
         this.messageRepository = messageRepository;
     }
 
-    //for sending and recieving messages
     @MessageMapping("/sendMessage/{roomId}")
-    @SendTo("/topic/group/{roomId}") //this is where message will reach
+    @SendTo("/topic/group/{roomId}")
     public Message sendMessage(@DestinationVariable String roomId, @RequestBody MessageRequest messageRequest){
-       ChatGroup chatGroup = groupRepository.findById(roomId).orElse(null);
-        if (chatGroup == null) {
-            throw new RuntimeException("Group room not found!");
-        }
-       Message message = new Message();
-       message.setContent(messageRequest.getContent());
-       message.setSenderId(messageRequest.getSender());
-       message.setTimeSent(LocalDateTime.now());
-       message.setRoomId(roomId);
-
-
-       if(chatGroup != null){
-           chatGroup.getMessage().add(message);
-           groupRepository.save(chatGroup);
-       }else{
-           throw new RuntimeException("room not Found!");
-       }
+        ChatGroup chatGroup = groupRepository.findById(roomId).orElseThrow(() -> new RuntimeException("Group room not found!"));
+        Message message = new Message();
+        message.setContent(messageRequest.getContent());
+        message.setSenderId(messageRequest.getSender());
+        message.setTimeSent(LocalDateTime.now());
+        message.setRoomId(roomId);
         return messageRepository.save(message);
-
     }
 }

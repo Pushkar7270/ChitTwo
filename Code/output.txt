@@ -1,0 +1,145 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.example:BackendCode >-----------------------
+[INFO] Building BackendCode 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.1.0:run (default-cli) > test-compile @ BackendCode >>>
+[INFO] 
+[INFO] --- frontend:1.15.1:install-node-and-npm (install-node-and-npm) @ BackendCode ---
+[INFO] Node v22.16.0 is already installed.
+[INFO] 
+[INFO] --- frontend:1.15.1:npm (npm-install) @ BackendCode ---
+[INFO] Running 'npm install' in c:\Users\Pushkar\OneDrive\Documents\GitHub\ChitTwo\Code\src\main\resources\static\chittwo-frontend\chittwo-frontend
+[INFO] 
+[INFO] up to date, audited 40 packages in 951ms
+[INFO] 
+[INFO] 11 packages are looking for funding
+[INFO]   run `npm fund` for details
+[INFO] 
+[INFO] found 0 vulnerabilities
+[INFO] 
+[INFO] --- frontend:1.15.1:npm (npm-build) @ BackendCode ---
+[INFO] Running 'npm run build' in c:\Users\Pushkar\OneDrive\Documents\GitHub\ChitTwo\Code\src\main\resources\static\chittwo-frontend\chittwo-frontend
+[INFO] 
+[INFO] > chittwo-frontend@0.0.0 build
+[INFO] > vite build
+[INFO] 
+[INFO] 
+[INFO] (!) build.outDir must not be the same directory of root or a parent directory of root as this could cause Vite to overwriting source files with build outputs.
+[INFO] 
+[INFO] vite v8.1.5 building client environment for production...
+[INFO] 
+[INFO] transforming...? 1879 modules transformed.
+[INFO] (!) The public directory feature may not work correctly. outDir c:\Users\Pushkar\OneDrive\Documents\GitHub\ChitTwo\Code\src\main\resources\static and publicDir c:/Users/Pushkar/OneDrive/Documents/GitHub/ChitTwo/Code/src/main/resources/static/chittwo-frontend/chittwo-frontend/public are not separate folders.
+[INFO] 
+[INFO] rendering chunks...
+[INFO] computing gzip size...
+[INFO] ../../index.html                   0.84 kB ? gzip:  0.45 kB
+[INFO] ../../assets/index-BViZkCNs.css   15.51 kB ? gzip:  3.40 kB
+[INFO] ../../assets/index-DD0rZVa6.js   282.91 kB ? gzip: 88.21 kB
+[INFO] 
+[INFO] ? built in 219ms
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ BackendCode ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 7236 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ BackendCode ---
+[INFO] Recompiling the module because of added or removed source files.
+[INFO] Compiling 9 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ BackendCode ---
+[INFO] skip non existing resourceDirectory c:\Users\Pushkar\OneDrive\Documents\GitHub\ChitTwo\Code\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ BackendCode ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] <<< spring-boot:4.1.0:run (default-cli) < test-compile @ BackendCode <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.1.0:run (default-cli) @ BackendCode ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-07-29T10:42:34.084+05:30  INFO 16080 --- [           main] o.e.backendcode.BackendCodeApplication   : Starting BackendCodeApplication using Java 21.0.10 with PID 16080 (C:\Users\Pushkar\OneDrive\Documents\GitHub\ChitTwo\Code\target\classes started by Pushkar in c:\Users\Pushkar\OneDrive\Documents\GitHub\ChitTwo\Code)
+2026-07-29T10:42:34.086+05:30  INFO 16080 --- [           main] o.e.backendcode.BackendCodeApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-07-29T10:42:34.444+05:30  INFO 16080 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-29T10:42:34.477+05:30  INFO 16080 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2026-07-29T10:42:34.762+05:30  INFO 16080 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-29T10:42:34.771+05:30  INFO 16080 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-29T10:42:34.772+05:30  INFO 16080 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-29T10:42:34.803+05:30  INFO 16080 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 684 ms
+2026-07-29T10:42:34.900+05:30  INFO 16080 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-29T10:42:34.934+05:30  INFO 16080 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-29T10:42:35.200+05:30  INFO 16080 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-29T10:42:35.222+05:30  INFO 16080 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-29T10:42:35.416+05:30  INFO 16080 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27fc0217
+2026-07-29T10:42:35.418+05:30  INFO 16080 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-29T10:42:35.471+05:30  INFO 16080 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/chitTwo]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: chitTwo/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-29T10:42:36.043+05:30  INFO 16080 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-29T10:42:36.088+05:30  INFO 16080 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-29T10:42:36.132+05:30  INFO 16080 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-29T10:42:36.330+05:30  WARN 16080 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-29T10:42:36.379+05:30  INFO 16080 --- [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-29T10:42:36.494+05:30  INFO 16080 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2026-07-29T10:42:36.494+05:30  INFO 16080 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@11efa76e]]
+2026-07-29T10:42:36.494+05:30  INFO 16080 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2026-07-29T10:42:36.499+05:30  INFO 16080 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2026-07-29T10:42:36.499+05:30  INFO 16080 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@11efa76e]]
+2026-07-29T10:42:36.499+05:30  INFO 16080 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2026-07-29T10:42:36.499+05:30  WARN 16080 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-07-29T10:42:36.500+05:30  INFO 16080 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-29T10:42:36.501+05:30  INFO 16080 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-29T10:42:36.506+05:30  INFO 16080 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-29T10:42:36.514+05:30  INFO 16080 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-29T10:42:36.523+05:30 ERROR 16080 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.603 s
+[INFO] Finished at: 2026-07-29T10:42:36+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.1.0:run (default-cli) on project BackendCode: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

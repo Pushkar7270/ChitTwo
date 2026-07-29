@@ -37,25 +37,33 @@ export function ChatSocketProvider({ children }) {
     const client = clientRef.current;
     if (!client) return () => {};
 
+    let sub;
+
     if (client.connected) {
-      const sub = subscribeToRoom(client, roomId, onMessage);
-      return () => sub.unsubscribe();
+      sub = subscribeToRoom(client, roomId, onMessage);
+      return () => sub?.unsubscribe();
     }
 
-    // Not connected yet - subscribe as soon as the connection comes up.
-    let sub;
-    const onConnectOriginal = client.onConnect;
+    // Queue subscription until connected
+    const pending = { cancelled: false };
+    const origOnConnect = client.onConnect;
     client.onConnect = (frame) => {
-      onConnectOriginal?.(frame);
-      sub = subscribeToRoom(client, roomId, onMessage);
+      origOnConnect?.(frame);
+      if (!pending.cancelled) {
+        sub = subscribeToRoom(client, roomId, onMessage);
+      }
     };
-    return () => sub?.unsubscribe();
+    return () => {
+      pending.cancelled = true;
+      sub?.unsubscribe();
+    };
   }
 
   function send(roomId, payload) {
     const client = clientRef.current;
     if (!client?.connected) {
-      throw new Error("Not connected to the chat server yet");
+      console.error("send() called but client not connected", client);
+      return;
     }
     publishMessage(client, roomId, payload);
   }

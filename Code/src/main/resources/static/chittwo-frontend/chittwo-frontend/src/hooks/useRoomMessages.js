@@ -23,8 +23,8 @@ export function useRoomMessages(roomId) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (!roomId) {
-      setMessages([]);
+    if (!roomId || status !== "connected") {
+      if (!roomId) setMessages([]);
       return;
     }
     let cancelled = false;
@@ -60,7 +60,7 @@ export function useRoomMessages(roomId) {
       unsubscribe();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [roomId]);
+  }, [roomId, status]);
 
   function sendMessage(content) {
     if (!content.trim() || !roomId) return;

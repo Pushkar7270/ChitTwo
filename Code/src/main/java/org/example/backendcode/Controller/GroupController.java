@@ -27,9 +27,8 @@ public class GroupController {
     //create group
     @PostMapping
     public ResponseEntity<?> createGroup(@RequestBody String roomName){
-        //create room
         ChatGroup chatGroup = new ChatGroup();
-        chatGroup.setRoomName(roomName);
+        chatGroup.setRoomName(roomName.replaceAll("^\"|\"$", ""));
         groupRepository.save(chatGroup);
         return ResponseEntity.status(HttpStatus.CREATED).body(chatGroup);
     }
