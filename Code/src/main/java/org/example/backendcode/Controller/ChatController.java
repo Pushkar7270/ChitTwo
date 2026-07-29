@@ -6,17 +6,17 @@ import org.example.backendcode.Entities.Message;
 import org.example.backendcode.Payload.MessageRequest;
 import org.example.backendcode.Repository.GroupRepository;
 import org.example.backendcode.Repository.MessageRepository;
-import org.springframework.cglib.core.Local;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.time.LocalDateTime;
 
 @Controller
+@CrossOrigin("*")
 public class ChatController {
 
     private GroupRepository groupRepository;
