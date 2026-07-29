@@ -1,7 +1,7 @@
 import { Client } from "@stomp/stompjs";
 import SockJS from "sockjs-client";
 
-import { WS_URL } from "../constants/appConstants";
+const WS_URL = import.meta.env.VITE_WS_URL || "http://localhost:8080/chat";
 
 /**
  * Thin wrapper around a single STOMP client connected to the backend's

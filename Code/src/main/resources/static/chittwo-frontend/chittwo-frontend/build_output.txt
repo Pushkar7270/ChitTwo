@@ -1,0 +1,54 @@
+
+> chittwo-frontend@0.0.0 build
+> vite build
+
+[33m
+(!) build.outDir must not be the same directory of root or a parent directory of root as this could cause Vite to overwriting source files with build outputs.
+[39m
+[36mvite v8.1.5 [32mbuilding client environment for production...[36m[39m
+[2Ktransforming...✓ 1821 modules transformed.
+[31m✗[39m Build failed in 159ms
+[31merror during build:
+[31mBuild failed with 2 errors:
+
+[31m[UNRESOLVED_IMPORT] [0mCould not resolve '../constants/appConstants' in src/api/socket.js
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/api/socket.js:3:24 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m3 │[0m [38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249m{[0m[38;5;249m [0m[38;5;249mW[0m[38;5;249mS[0m[38;5;249m_[0m[38;5;249mU[0m[38;5;249mR[0m[38;5;249mL[0m[38;5;249m [0m[38;5;249m}[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m"../constants/appConstants"[38;5;249m;[0m
+ [38;5;240m  │[0m                        ─────────────┬─────────────  
+ [38;5;240m  │[0m                                     ╰─────────────── Module not found.
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: 'src/api/socket.js' is imported by the following path:
+ [38;5;240m  │[0m         - src/api/socket.js
+ [38;5;240m  │[0m         - src/context/ChatSocketContext.jsx
+ [38;5;240m  │[0m         - src/App.jsx
+ [38;5;240m  │[0m         - src/main.jsx
+ [38;5;240m  │[0m         - index.html
+[38;5;246m───╯[0m
+
+[31m[UNRESOLVED_IMPORT] [0mCould not resolve '../constants/appConstants' in src/api/http.js
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/api/http.js:1:26 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m [38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249m{[0m[38;5;249m [0m[38;5;249mB[0m[38;5;249mA[0m[38;5;249mS[0m[38;5;249mE[0m[38;5;249m_[0m[38;5;249mU[0m[38;5;249mR[0m[38;5;249mL[0m[38;5;249m [0m[38;5;249m}[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m"../constants/appConstants"[38;5;249m;[0m
+ [38;5;240m  │[0m                          ─────────────┬─────────────  
+ [38;5;240m  │[0m                                       ╰─────────────── Module not found.
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: 'src/api/http.js' is imported by the following path:
+ [38;5;240m  │[0m         - src/api/http.js
+ [38;5;240m  │[0m         - src/api/groups.js
+ [38;5;240m  │[0m         - src/hooks/useRoomMessages.js
+ [38;5;240m  │[0m         - src/components/layout/AppShell.jsx
+ [38;5;240m  │[0m         - src/App.jsx
+ [38;5;240m  │[0m         - src/main.jsx
+ [38;5;240m  │[0m         - index.html
+[38;5;246m───╯[0m
+[31m
+    at aggregateBindingErrorsIntoJsError (file:///c:/Users/Pushkar/OneDrive/Documents/GitHub/ChitTwo/Code/src/main/resources/static/chittwo-frontend/chittwo-frontend/node_modules/rolldown/dist/shared/error-BHRSI0R7.mjs:48:18)
+    at unwrapBindingResult (file:///c:/Users/Pushkar/OneDrive/Documents/GitHub/ChitTwo/Code/src/main/resources/static/chittwo-frontend/chittwo-frontend/node_modules/rolldown/dist/shared/error-BHRSI0R7.mjs:18:128)
+    at #build (file:///c:/Users/Pushkar/OneDrive/Documents/GitHub/ChitTwo/Code/src/main/resources/static/chittwo-frontend/chittwo-frontend/node_modules/rolldown/dist/shared/rolldown-build-CtPvmZgJ.mjs:3276:34)
+    at async buildEnvironment (file:///c:/Users/Pushkar/OneDrive/Documents/GitHub/ChitTwo/Code/src/main/resources/static/chittwo-frontend/chittwo-frontend/node_modules/vite/dist/node/chunks/node.js:33061:66)
+    at async Object.build (file:///c:/Users/Pushkar/OneDrive/Documents/GitHub/ChitTwo/Code/src/main/resources/static/chittwo-frontend/chittwo-frontend/node_modules/vite/dist/node/chunks/node.js:33483:19)
+    at async Object.buildApp (file:///c:/Users/Pushkar/OneDrive/Documents/GitHub/ChitTwo/Code/src/main/resources/static/chittwo-frontend/chittwo-frontend/node_modules/vite/dist/node/chunks/node.js:33480:153)
+    at async CAC.<anonymous> (file:///c:/Users/Pushkar/OneDrive/Documents/GitHub/ChitTwo/Code/src/main/resources/static/chittwo-frontend/chittwo-frontend/node_modules/vite/dist/node/cli.js:776:3) {
+  errors: [Getter/Setter]
+}[39m
