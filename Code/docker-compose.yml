@@ -1,0 +1,25 @@
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: chitTwo
+    ports:
+      - "3307:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    image: chittwo
+    ports:
+      - "8080:8080"
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: password
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/chitTwo
+    depends_on:
+      db:
+        condition: service_healthy
