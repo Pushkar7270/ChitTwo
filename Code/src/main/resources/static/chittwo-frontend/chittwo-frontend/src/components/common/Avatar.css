@@ -1,0 +1,16 @@
+.avatar {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.avatar--ringed {
+  box-shadow: 0 0 0 3px var(--bg-panel), 0 0 0 4.5px var(--border-strong);
+}

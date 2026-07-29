@@ -5,6 +5,7 @@ import org.example.backendcode.Entities.ChatGroup;
 import org.example.backendcode.Entities.Message;
 import org.example.backendcode.Payload.MessageRequest;
 import org.example.backendcode.Repository.GroupRepository;
+import org.example.backendcode.Repository.MessageRepository;
 import org.springframework.cglib.core.Local;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -19,9 +20,11 @@ import java.time.LocalDateTime;
 public class ChatController {
 
     private GroupRepository groupRepository;
+    private final MessageRepository messageRepository;
 
-    public ChatController(GroupRepository groupRepository){
+    public ChatController(GroupRepository groupRepository, MessageRepository messageRepository){
         this.groupRepository = groupRepository;
+        this.messageRepository = messageRepository;
     }
 
     //for sending and recieving messages
@@ -36,7 +39,7 @@ public class ChatController {
        message.setContent(messageRequest.getContent());
        message.setSenderId(messageRequest.getSender());
        message.setTimeSent(LocalDateTime.now());
-       message.setRoomId(messageRequest.getRoomId());
+       message.setRoomId(roomId);
 
 
        if(chatGroup != null){
@@ -45,7 +48,7 @@ public class ChatController {
        }else{
            throw new RuntimeException("room not Found!");
        }
-       return message;
+        return messageRepository.save(message);
 
     }
 }

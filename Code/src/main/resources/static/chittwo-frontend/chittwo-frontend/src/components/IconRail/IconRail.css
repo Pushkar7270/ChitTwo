@@ -1,0 +1,95 @@
+.icon-rail {
+  width: var(--w-icon-rail);
+  flex-shrink: 0;
+  background: var(--bg-app);
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  gap: 28px;
+}
+
+.icon-rail__identity {
+  position: relative;
+}
+
+.icon-rail__avatar-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.icon-rail__menu {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  z-index: 30;
+  width: 176px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-panel);
+  padding: 10px;
+}
+
+.icon-rail__menu-name {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 2px 6px 8px;
+}
+
+.icon-rail__menu button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 13px;
+  padding: 8px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.icon-rail__menu button:hover {
+  background: var(--bg-elevated-hover);
+}
+
+.icon-rail__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.icon-rail__item {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-rail__item:not(:disabled):hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.icon-rail__item--active {
+  background: var(--grad-brand);
+  color: #fff;
+}
+
+.icon-rail__item:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.icon-rail__item--settings {
+  margin-top: auto;
+}

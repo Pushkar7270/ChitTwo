@@ -1,0 +1,87 @@
+.identity-gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.identity-gate__glow {
+  position: absolute;
+  inset: 0;
+  background: var(--grad-glow);
+  z-index: 0;
+}
+
+.identity-card {
+  position: relative;
+  z-index: 1;
+  width: min(380px, 90vw);
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.identity-card__mark {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--grad-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.identity-card h1 {
+  font-size: 22px;
+}
+
+.identity-card p {
+  color: var(--text-secondary);
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.identity-card input {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.identity-card input:focus {
+  border-color: #b26bff;
+}
+
+.identity-card button {
+  width: 100%;
+  margin-top: 4px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--grad-brand);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.identity-card button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

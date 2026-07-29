@@ -1,0 +1,56 @@
+:root {
+  /* ---- Surfaces ---- */
+  --bg-void: #0a0a10;
+  --bg-app: #14141d;
+  --bg-panel: #191a24;
+  --bg-elevated: #1f2029;
+  --bg-elevated-hover: #262735;
+  --bg-input: #21222c;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.12);
+
+  /* ---- Text ---- */
+  --text-primary: #f4f3f7;
+  --text-secondary: #a8a7b8;
+  --text-muted: #6f6e80;
+
+  /* ---- Brand gradients (lifted from the reference: pink/red -> orange for
+     "incoming", violet -> magenta for "outgoing", pink -> purple for brand) ---- */
+  --grad-brand: linear-gradient(135deg, #ff3d77 0%, #b026d9 100%);
+  --grad-incoming: linear-gradient(135deg, #ff8a5c 0%, #ff3d68 100%);
+  --grad-outgoing: linear-gradient(135deg, #8b5cf6 0%, #d6409f 100%);
+  --grad-glow: radial-gradient(circle at 15% 10%, #6a1b4d 0%, transparent 45%),
+    radial-gradient(circle at 85% 90%, #2a1150 0%, transparent 45%);
+
+  /* Deterministic avatar gradient palette (cycled by hash of a name/id) */
+  --grad-avatar-0: linear-gradient(135deg, #ff8a5c, #ff3d77);
+  --grad-avatar-1: linear-gradient(135deg, #8b5cf6, #d6409f);
+  --grad-avatar-2: linear-gradient(135deg, #22c1c3, #6f86d6);
+  --grad-avatar-3: linear-gradient(135deg, #f7b733, #fc4a1a);
+  --grad-avatar-4: linear-gradient(135deg, #43cea2, #185a9d);
+  --grad-avatar-5: linear-gradient(135deg, #f857a6, #ff5858);
+
+  /* ---- Status ---- */
+  --color-online: #34d399;
+  --color-danger: #ff5f6d;
+  --color-badge: #ff3d77;
+
+  /* ---- Type ---- */
+  --font-display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* ---- Radii ---- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ---- Shadow ---- */
+  --shadow-panel: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
+  --shadow-bubble: 0 6px 18px -8px rgba(0, 0, 0, 0.45);
+
+  /* ---- Layout ---- */
+  --w-icon-rail: 76px;
+  --w-room-list: 336px;
+  --w-profile-panel: 292px;
+}

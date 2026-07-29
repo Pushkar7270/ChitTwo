@@ -4,6 +4,7 @@ package org.example.backendcode.Controller;
 import org.example.backendcode.Entities.ChatGroup;
 import org.example.backendcode.Entities.Message;
 import org.example.backendcode.Repository.GroupRepository;
+import org.example.backendcode.Repository.MessageRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,10 +16,12 @@ import java.util.List;
 @CrossOrigin("*")
 public class GroupController {
     private final GroupRepository groupRepository;
+    private final MessageRepository messageRepository;
 
 
-    public GroupController(GroupRepository groupRepository){
+    public GroupController(GroupRepository groupRepository, MessageRepository messageRepository){
         this.groupRepository = groupRepository;
+        this.messageRepository = messageRepository;
     }
 
     //create group
@@ -56,14 +59,13 @@ public class GroupController {
                                                         int size)
     {
 
-
         ChatGroup group = groupRepository.findById(roomId).orElse(null);
 
-        if(group == null){
+        if (!groupRepository.existsById(roomId)) {
             return ResponseEntity.badRequest().build();
         }
 
-        List<Message> messages = group.getMessage();
+        List<Message> messages = messageRepository.findByRoomIdOrderByTimeSentAsc(roomId);
 
         //pagination
         if(size == 0){

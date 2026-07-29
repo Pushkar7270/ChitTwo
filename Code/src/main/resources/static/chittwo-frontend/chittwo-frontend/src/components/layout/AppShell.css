@@ -1,0 +1,13 @@
+.app-shell {
+  height: 100dvh;
+  display: flex;
+  background: var(--bg-app);
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    --w-room-list: 100%;
+  }
+}
